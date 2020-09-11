@@ -1,6 +1,5 @@
 float voltage = 0;                          //the voltage measured from the TMP36
 float degreesC = 0;                         //the temperature in Celsius, calculated from the voltage
-float degreesF = 0;                         //the temperature in Fahrenheit, calculated from the voltage
 
 void setup() {  
   Serial.begin(9600);                       //declare serial port
