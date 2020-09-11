@@ -13,12 +13,12 @@ void draw() {
     String SenVal = udSerial.readString();
     if (SenVal != null) {
       output.print(SenVal);
+      output.flush();
     }
   }
 }
 
 void keyPressed(){
-  output.flush();
   output.close();
   exit();
 }
