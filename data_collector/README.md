@@ -1,4 +1,4 @@
-# Data collector with Processing and Arduino
+# Data collector with Python and Arduino
 
 1. Load `data_collector.ino` using Arduino IDE.
 2. Update `port` and `baudrate` in `data_collector.ino` and `data_collector.py` (COM4 and 9600 used in this example).
