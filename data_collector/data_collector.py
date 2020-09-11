@@ -15,7 +15,7 @@ while True:
   if line != '':
     print(line)
 
-  with open("data.txt", "a") as data_txt:
-    data_txt.write(line)
+    with open("data.txt", "a") as data_txt:
+      data_txt.write(line)
 
 ser.close()
