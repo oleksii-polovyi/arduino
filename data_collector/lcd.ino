@@ -21,10 +21,11 @@ void loop() {
   degreesC = (voltage - 0.5) * 100.0;       //convert the voltage to a temperature in degrees Celsius
   
   lcd.setCursor(0, 0);                      //set the cursor to the 0,0 position (top left corner)
-  lcd.print(row1);       
+  lcd.print(row1);
+
   lcd.setCursor(0, 1);                      //move the cursor to the first space of the bottom row
-  
   lcd.print(String(degreesC) + (char)223 + "C");
+  
   Serial.println(String(degreesC));         //send data to the serial port
 
   delay(1000);                              //delay for 1 second between each reading (this makes the display less noisy)
