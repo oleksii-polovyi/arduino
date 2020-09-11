@@ -1,4 +1,5 @@
 import serial
+from time import sleep
 
 ser = serial.Serial(
   port = 'COM4', \
@@ -8,14 +9,16 @@ ser = serial.Serial(
   bytesize = serial.EIGHTBITS, \
   timeout = 0)
 
-print("Connected to: " + ser.portstr)
+try:
+  while True:
+    line = ser.readline().decode('utf-8').rstrip("\n")
+    if line != '':
+      print(line)
+  
+      with open("data.txt", "a") as data_txt:
+        data_txt.write(line)
 
-while True:
-  line = ser.readline().decode('utf-8').rstrip("\n")
-  if line != '':
-    print(line)
-
-    with open("data.txt", "a") as data_txt:
-      data_txt.write(line)
+except KeyboardInterrupt:
+  pass
 
 ser.close()
