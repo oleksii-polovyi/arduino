@@ -1,5 +1,4 @@
 import serial
-from time import sleep
 
 ser = serial.Serial(
   port = 'COM4', \
