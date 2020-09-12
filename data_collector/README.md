@@ -6,4 +6,4 @@
 4. Run `tail -f data.txt` in separate CLI to show the latest data written to the `data.txt` file.
 5. Use `CTRL+C` to stop the python and/or tail process.
 
-![LCD][./lcd.jpg]
+![LCD](./lcd.jpg)
