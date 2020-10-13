@@ -12,7 +12,7 @@ ser = serial.Serial(
   timeout = 0)
 
 @app.route('/')
-def hello_world():
+def collector():
   temperature = 0.0
   try:
     temperature = float(ser.readline().decode('utf-8').rstrip("\n").rstrip("\r"))
